@@ -5,26 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Manifest XR Configurations</title>
   <style>
-    body { margin: 0; background: #101010; color: white; font-family: Arial, sans-serif; }
-    header { padding: 16px 24px; }
-    a { color: #e7bd70; }
-    iframe { display: block; width: 100%; height: 90vh; border: 0; }
+    body {
+      margin: 0;
+      background: #101010;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header { padding: 20px; }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #e7bd70;
+      color: #101010;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 85vh;
+      border: 0;
+    }
+
+    .mobile-message { display: none; }
+
+    @media (max-width: 768px) {
+      iframe { display: none; }
+      .mobile-message {
+        display: block;
+        line-height: 1.6;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <a href="mxr-configurations.pdf" target="_blank" rel="noopener">
-      Open the full PDF
+    <h1>Manifest XR Configurations</h1>
+
+    <p class="mobile-message">
+      Open the brochure to view all pages and zoom in.
+      Rotate your phone for a larger landscape view.
+    </p>
+
+    <a class="button"
+       href="mxr-configurations.pdf"
+       target="_blank"
+       rel="noopener">
+      Open PDF brochure
     </a>
   </header>
+
   <iframe
     src="mxr-configurations.pdf"
     title="Manifest XR Configurations">
   </iframe>
-  <iframe
-  src="mxr-configurations.pdf"
-  title="Manifest XR Configurations"
-  style="width:100%; height:85vh; border:0;">
-</iframe>
 </body>
 </html>
